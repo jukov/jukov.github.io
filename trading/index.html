@@ -1,0 +1,15 @@
+<!--https://app.tab-trader.com/trading?list=Default&market=BITMEX&pair=XBTUSD-->
+
+<body>
+Exchange: <p id="exchange">...</p>
+Symbol: <p id="symbol">...</p>
+
+<script>
+    const queryParameters = new URLSearchParams(window.location.search);
+    const exchange = queryParameters.get('market');
+    const symbol = queryParameters.get('pair');
+
+    document.getElementById("exchange").innerHTML = exchange;
+    document.getElementById("symbol").innerHTML = symbol;
+</script>
+</body>
