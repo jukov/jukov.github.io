@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.tabtrader.android.develop",
+    "sha256_cert_fingerprints":
+    ["90:4D:65:F0:DB:7B:8F:85:9A:A6:88:AD:40:B0:34:81:4F:4D:9A:28:0C:85:BB:36:83:03:5F:B3:CB:21:25:86"]
+  }
+}]
