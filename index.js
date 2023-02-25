@@ -269,7 +269,7 @@ function setColors() {
     const text = document.getElementsByClassName("text");
     for (let i = 0; i < text.length; i++) {
         text[i].style.color = primary
-    }  
+    }
     const border = document.getElementsByClassName("border");
     for (let i = 0; i < border.length; i++) {
         border[i].style.borderColor = primary
@@ -281,6 +281,17 @@ function setColors() {
     snakeColor = primary;
     headColor = primaryDark;
     appleColor = accent;
+
+    var canvas = document.createElement('canvas');
+    canvas.width = 16; canvas.height = 16;
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = background;
+    utils.roundRect(ctx, 0, 0, 16, 16, 6, true, false)
+    var link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = canvas.toDataURL("image/x-icon");
+    document.getElementsByTagName('head')[0].appendChild(link);
 }
 
 setColors();
