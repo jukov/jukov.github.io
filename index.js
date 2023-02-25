@@ -96,19 +96,19 @@ document.addEventListener('keydown', (e) => {
     let lastDirection = directionQueue[directionQueue.length - 1];
 
     if (e.code === "ArrowUp" || e.code == "KeyW") {
-        if (direction !== DOWN && lastDirection != UP) {
+        if (lastDirection != UP) {
             directionQueue.push(UP);
         }
     } else if (e.code === "ArrowDown" || e.code == "KeyS") {
-        if (direction !== UP && lastDirection != DOWN) {
+        if (lastDirection != DOWN) {
             directionQueue.push(DOWN);
         }
     } else if (e.code === "ArrowLeft" || e.code == "KeyA") {
-        if (direction !== RIGHT && lastDirection != LEFT) {
+        if (lastDirection != LEFT) {
             directionQueue.push(LEFT);
         }
     } else if (e.code === "ArrowRight" || e.code == "KeyD") {
-        if (direction !== LEFT && lastDirection != RIGHT) {
+        if (lastDirection != RIGHT) {
             directionQueue.push(RIGHT);
         }
     }
@@ -150,7 +150,14 @@ function calc() {
     }
 
     if (directionQueue.length !== 0) {
-        direction = directionQueue.shift();
+        const newDirection = directionQueue.shift();
+        const leftInvalid = direction === LEFT && newDirection === RIGHT;
+        const rightInvalid = direction === RIGHT && newDirection === LEFT;
+        const upInvalid = direction === UP && newDirection === DOWN;
+        const downInvalid = direction === DOWN && newDirection === UP;
+        if (!leftInvalid && !rightInvalid && !upInvalid && !downInvalid) {
+            direction = newDirection;
+        }
     }
 
     let x = head.x;
