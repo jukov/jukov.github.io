@@ -225,6 +225,8 @@ function newApple() {
 }
 
 function reset() {
+    setColors();
+
     head = new Node(10, 10);
     head.next = new Node(9, 10);
     head.next.next = new Node(8, 10);
@@ -301,7 +303,6 @@ function setColors() {
     document.getElementsByTagName('head')[0].appendChild(link);
 }
 
-setColors();
 setBest();
 reset();
 setInterval(loop, SPEED);
