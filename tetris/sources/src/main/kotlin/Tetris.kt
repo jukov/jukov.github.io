@@ -1,8 +1,6 @@
 import kotlinx.browser.document
 import kotlinx.browser.window
-import org.w3c.dom.CanvasRenderingContext2D
-import org.w3c.dom.HTMLCanvasElement
-import org.w3c.dom.HTMLElement
+import org.w3c.dom.*
 import org.w3c.dom.events.Event
 import org.w3c.dom.events.EventListener
 import org.w3c.dom.events.KeyboardEvent
@@ -81,6 +79,8 @@ fun reset() {
 
     colorHue = Random.nextInt(0..360)
     nextColorHue = colorHue + COLOR_INCREASE
+
+    setFavicon()
 
     downPressed = false
 
@@ -333,9 +333,24 @@ fun calc() {
             checkRows()
             colorHue = (colorHue + COLOR_INCREASE).mod(360)
             nextColorHue = (nextColorHue + COLOR_INCREASE).mod(360)
+            setFavicon()
         }
     }
     figureY += 1
+}
+
+fun setFavicon() {
+    val canvas = document.createElement("canvas") as HTMLCanvasElement
+    canvas.width = 16
+    canvas.height = 16
+    val context = canvas.getContext("2d") as CanvasRenderingContext2D
+    context.fillStyle = hslToHex(colorHue, SATURATION, LIGHTNESS)
+    context.roundRect(0.0, 0.0, 16.0, 16.0, 6.0, true, false)
+    val link = document.createElement("link") as HTMLLinkElement
+    link.type = "image/x-icon"
+    link.rel = "shortcut icon"
+    link.href = canvas.toDataURL("image/x-icon");
+    document.getElementsByTagName("head")[0]?.appendChild(link)
 }
 
 fun checkLose(): Boolean {
