@@ -21,12 +21,18 @@ body {
     font-family: 'Share-Tech-Mono';
 }
 
-.small {
+.title {
     font-size: 20pt;
 }
 
-.big {
+.value {
     font-size: 40pt;
+}
+
+.caption {
+    font-size: 15pt;
+    padding-left: 1cm;
+    padding-top: 0.5cm;
 }
 
 .paddingBottom {

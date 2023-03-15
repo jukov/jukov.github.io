@@ -8,18 +8,21 @@
 
 <body>
 <div class="center">
-    <div class="border">
-        <div class="horizontal">
-            <canvas id="snake" width="550" height="550"></canvas>
+    <div class="verticalAlign">
+        <div class="border">
+            <div class="horizontal">
+                <canvas id="snake" width="550" height="550"></canvas>
+            </div>
+            <div class="horizontal verticalAlign">
+                <div class="title text" id="score_title">Score</div>
+                <div class="value text paddingBottom" id="score">0</div>
+                <div class="title text" id="best_title">Best</div>
+                <div class="value text paddingBottom" id="best">0</div>
+                <div class="title text" id="dev_best_title">Dev Best</div>
+                <div class="value text paddingBottom" id="dev_best">0</div>
+            </div>
         </div>
-        <div class="horizontal verticalAlign">
-            <div class="small text" id="score_title">Score</div>
-            <div class="big text paddingBottom" id="score">0</div>
-            <div class="small text" id="best_title">Best</div>
-            <div class="big text paddingBottom" id="best">0</div>
-            <div class="small text" id="dev_best_title">Dev Best</div>
-            <div class="big text paddingBottom" id="dev_best">0</div>
-        </div>
+        <div class="caption text paddingLeft">Use arrows or WASD. You can pass through walls</div>
     </div>
 </div>
 
