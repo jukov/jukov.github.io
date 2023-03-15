@@ -95,19 +95,19 @@ function circleCell(x, y) {
 document.addEventListener('keydown', (e) => {
     let lastDirection = directionQueue[directionQueue.length - 1];
 
-    if (e.code === "ArrowUp" || e.code == "KeyW") {
+    if (e.code === "ArrowUp" || e.code === "KeyW") {
         if (lastDirection != UP) {
             directionQueue.push(UP);
         }
-    } else if (e.code === "ArrowDown" || e.code == "KeyS") {
+    } else if (e.code === "ArrowDown" || e.code === "KeyS") {
         if (lastDirection != DOWN) {
             directionQueue.push(DOWN);
         }
-    } else if (e.code === "ArrowLeft" || e.code == "KeyA") {
+    } else if (e.code === "ArrowLeft" || e.code === "KeyA") {
         if (lastDirection != LEFT) {
             directionQueue.push(LEFT);
         }
-    } else if (e.code === "ArrowRight" || e.code == "KeyD") {
+    } else if (e.code === "ArrowRight" || e.code === "KeyD") {
         if (lastDirection != RIGHT) {
             directionQueue.push(RIGHT);
         }

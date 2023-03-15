@@ -1,11 +1,15 @@
 @font-face {
-    font-family: 'Share-Tech-Mono';
-    src: url('res/font/ShareTechMono-Regular.ttf') format('ttf'),
-        url('res/font/ShareTechMono-Regular.woff2') format('woff2'),
-        url('res/font/ShareTechMono-Regular.woff') format('woff');
+    font-family: 'NotoSansLepcha';
+    src: url('res/font/NotoSansLepcha-Regular.ttf') format('ttf'),
+        url('res/font/NotoSansLepcha-Regular.woff2') format('woff2'),
+        url('res/font/NotoSansLepcha-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+body {
+    background-color: #EEEEEE;
 }
 
 .horizontal {
@@ -14,19 +18,19 @@
 }
 
 .text {
-    font-family: 'Share-Tech-Mono';
+    font-family: 'NotoSansLepcha';
 }
 
-.small {
-    font-size: 20pt;
+.regular {
+    font-size: 15pt;
 }
 
 .big {
-    font-size: 40pt;
+    font-size: 30pt;
 }
 
-.paddingBottom {
-    padding-bottom: 0.5cm;
+.paddingLeft {
+    padding-left: 0.1cm;
 }
 
 .verticalAlign {
@@ -44,13 +48,4 @@
     width: 90%;
     display: flex;
     justify-content: center;
-}
-
-.border {
-    display: inline-block;
-    border-radius: 10px;
-    border-style: solid;
-    padding: 10px;
-    stroke-linecap: butt;
-    stroke-dasharray: 0;
 }

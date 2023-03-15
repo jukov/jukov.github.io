@@ -3,3 +3,12 @@
 .idea
 _config.yml
 run.sh
+tetris/sources/build
+*/.gitignore
+tetris/sources/.gradle
+tetris/sources/build/js/*
+tetris/sources/build/js/node_modules/*
+tetris/sources/build/js/node_modules/kotlin
+tetris/sources/build/js/node_modules/kotlin-test-js-runner
+tetris/sources/build/js/node_modules/tetris
+tetris/sources/build/js/node_modules/tetris-test

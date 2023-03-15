@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Share-Tech-Mono';
+    src: url('res/font/ShareTechMono-Regular.ttf') format('ttf'),
+        url('res/font/ShareTechMono-Regular.woff2') format('woff2'),
+        url('res/font/ShareTechMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+.horizontal {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.text {
+    font-family: 'Share-Tech-Mono';
+}
+
+.small {
+    font-size: 20pt;
+}
+
+.big {
+    font-size: 40pt;
+}
+
+.paddingBottom {
+    padding-bottom: 0.5cm;
+}
+
+.verticalAlign {
+    vertical-align: top;
+    margin-top: 1cm;
+}
+
+.center {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 10em;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.border {
+    display: inline-block;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+    stroke-linecap: butt;
+    stroke-dasharray: 0;
+}
+
+.next {
+    margin-top: 15px;
+}
