@@ -3,7 +3,6 @@ import * as utils from "./utils.js";
 const SIZE = 20;
 const CELL_SIZE = 25;
 const SPEED = 200;
-const DEV_BEST = 95;
 const COOKIE_BEST_SCORE = "bestScore";
 
 const UP = 0;
@@ -21,8 +20,6 @@ const canvas = document.getElementById("snake");
 const scoreView = document.getElementById("score");
 const bestView = document.getElementById("best");
 const context = canvas.getContext("2d");
-
-document.getElementById("dev_best").innerHTML = DEV_BEST;
 
 class Node {
     x;
