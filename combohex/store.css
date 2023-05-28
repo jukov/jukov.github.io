@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'OverpassMono';
+  src: url('../res/font/OverpassMono-Medium.ttf') format('ttf'),
+    url('../res/font/OverpassMono-Medium.woff2') format('woff2'),
+    url('../res/font/OverpassMono-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #121212;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  /* Adjust this value to change the spacing between the text and links */
+}
+
+.text {
+  text-align: center;
+  margin-top: 5px;
+  margin-right: 10px;
+  font-family: 'OverpassMono';
+  font-size: 40pt;
+  color: white;
+  letter-spacing: 0.2em;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* Adjust this value to change the spacing between the link boxes */
+}
+
+.link-box {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+}
