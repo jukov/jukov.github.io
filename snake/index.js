@@ -1,7 +1,7 @@
 import * as utils from "./utils.js";
 
 const SIZE = 20;
-const CELL_SIZE = 25;
+let CELL_SIZE = 25;
 const SPEED = 200;
 const COOKIE_BEST_SCORE = "bestScore";
 
@@ -20,6 +20,17 @@ const canvas = document.getElementById("snake");
 const scoreView = document.getElementById("score");
 const bestView = document.getElementById("best");
 const context = canvas.getContext("2d");
+
+function resizeCanvas() {
+    const containerWidth = document.body.clientWidth - 40; // 40px for padding
+    canvas.width = containerWidth;
+    canvas.height = containerWidth;
+    CELL_SIZE = containerWidth / (SIZE + 2); // Adjust cell size based on canvas size
+    draw(); // Redraw the game
+}
+
+window.addEventListener('load', resizeCanvas);
+window.addEventListener('resize', resizeCanvas);
 
 class Node {
     x;
