@@ -12,3 +12,5 @@ tetris/sources/build/js/node_modules/kotlin
 tetris/sources/build/js/node_modules/kotlin-test-js-runner
 tetris/sources/build/js/node_modules/tetris
 tetris/sources/build/js/node_modules/tetris-test
+.DS_Store
+*/.DS_Store
