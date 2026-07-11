@@ -439,7 +439,7 @@ h3 {
   left: 52%;
   width: min(92%, 620px);
   max-width: none;
-  opacity: 0.16;
+  opacity: 0.12;
   transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -466,6 +466,7 @@ h3 {
   border-bottom: 1px solid rgba(17, 104, 94, 0.2);
   color: color-mix(in srgb, var(--muted) 88%, var(--accent));
   font-size: 17px;
+  font-weight: 500;
 }
 
 .result-list li::before,
