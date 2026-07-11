@@ -65,7 +65,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="hero-is-light">
     <noscript>
       <div>
         <img
@@ -81,9 +81,13 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero" data-hero-concept="zine" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
-          <img src="assets/hero-abstract-builders.png" alt="" />
+          <img
+            class="hero-image is-active"
+            src="assets/hero-market-stall.webp"
+            alt=""
+          />
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
@@ -98,7 +102,7 @@
             месяц приглашаем эксперта.
           </p>
           <div class="hero-actions">
-            <a class="primary-button" href="#inside">Заглянуть</a>
+            <a class="primary-button" href="#inside">Заглянуть внутрь</a>
           </div>
         </div>
       </section>
@@ -126,10 +130,6 @@
               и гипотезы, проверять решения и помогать другим участникам взглядом
               со стороны.
             </p>
-            <p class="not-for">
-              Не подойдёт, если ты пока только ищешь идею, хочешь пассивно
-              смотреть контент или ожидаешь, что продажи сделают за тебя.
-            </p>
           </div>
         </div>
       </section>
@@ -147,8 +147,8 @@
             <article class="format-item format-item-primary">
               <span class="feature-index">01</span>
               <div>
-                <p class="format-meta">Каждую неделю · 90 минут · онлайн</p>
                 <h3>Закрытая встреча с разборами проектов</h3>
+                <p class="format-meta">Каждую неделю · 90 минут · онлайн</p>
                 <p>
                   Коротко проходим по участникам: что изменилось в проекте, какие
                   появились цифры и где возник затык. Затем глубоко разбираем два
@@ -161,8 +161,8 @@
             <article class="format-item">
               <span class="feature-index">02</span>
               <div>
-                <p class="format-meta">Между встречами</p>
                 <h3>Закрытый Telegram-чат</h3>
+                <p class="format-meta">Между встречами</p>
                 <p>
                   Приноси оффер, лендинг, сообщение клиенту, рекламу или цифры
                   воронки. Получишь обратную связь от нас и других участников,
@@ -174,8 +174,8 @@
             <article class="format-item">
               <span class="feature-index">03</span>
               <div>
-                <p class="format-meta">Раз в месяц</p>
                 <h3>Эксперт по маркетингу или продажам</h3>
+                <p class="format-meta">Раз в месяц</p>
                 <p>
                   Мы видим, во что упираются проекты, и раз в месяц приглашаем
                   под эти задачи практика — в контенте, рекламе, продажах или
@@ -188,8 +188,8 @@
             <article class="format-item">
               <span class="feature-index">04</span>
               <div>
-                <p class="format-meta">Открытый формат</p>
                 <h3>Открытые разборы проектов</h3>
+                <p class="format-meta">Открытый формат</p>
                 <p>
                   По желанию можно вынести проект на публичную встречу: получить
                   подробную обратную связь и показать продукт широкой аудитории.
@@ -209,15 +209,24 @@
               Не застреваешь в разработке, когда пора искать пользователей
             </h2>
           </div>
-          <ul class="result-list">
-            <li>взгляд со стороны на продукт, оффер и способ продвижения;</li>
-            <li>конкретные следующие проверки вместо списка из двадцати идей;</li>
-            <li>людей рядом, которые тоже уже запустились и решают бизнесовые задачи;</li>
-            <li>доступ к практикам, которых не хватает внутри команды;</li>
-            <li>регулярные разговоры про пользователей, продажи и рост;</li>
-            <li>гарантированный рабочий разбор своего вопроса минимум раз в месяц;</li>
-            <li>возможность публично разобрать и показать проект широкой аудитории.</li>
-          </ul>
+          <div class="result-list-wrap">
+            <img
+              class="result-list-art"
+              src="assets/result-keyboard-megaphone-v2.webp"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <ul class="result-list">
+              <li>взгляд со стороны на продукт, оффер и способ продвижения;</li>
+              <li>конкретные следующие проверки вместо списка из двадцати идей;</li>
+              <li>людей рядом, которые тоже уже запустились и решают бизнесовые задачи;</li>
+              <li>доступ к практикам, которых не хватает внутри команды;</li>
+              <li>регулярные разговоры про пользователей, продажи и рост;</li>
+              <li>гарантированный рабочий разбор своего вопроса минимум раз в месяц;</li>
+              <li>возможность публично разобрать и показать проект широкой аудитории.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -230,8 +239,33 @@
             </div>
             <div class="text-stack">
               <p>
-                Мы — Саня и Ник, бывшие разработчик и продакт. Сейчас сами
-                строим продукты и учимся выводить их на рынок.
+                Мы —
+                <a
+                  class="founder-link"
+                  href="https://t.me/a168boba"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Telegram Сани"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.7 4.1 17.9 19c-.2 1.1-.8 1.4-1.7.9l-4.3-3.2-2.1 2c-.2.2-.4.4-.9.4l.3-4.4 8-7.2c.4-.3-.1-.5-.5-.2l-9.9 6.2-4.2-1.3c-.9-.3-.9-.9.2-1.3L19.2 4.6c.8-.3 1.5.2 1.5-.5Z" />
+                  </svg>
+                  Саня</a
+                >
+                и
+                <a
+                  class="founder-link"
+                  href="https://click.tgtrack.ru/1e27fe6feb298d"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Telegram Ника"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.7 4.1 17.9 19c-.2 1.1-.8 1.4-1.7.9l-4.3-3.2-2.1 2c-.2.2-.4.4-.9.4l.3-4.4 8-7.2c.4-.3-.1-.5-.5-.2l-9.9 6.2-4.2-1.3c-.9-.3-.9-.9.2-1.3L19.2 4.6c.8-.3 1.5.2 1.5-.5Z" />
+                  </svg>
+                  Ник</a
+                >, бывшие разработчик и продакт. Сейчас сами строим продукты и
+                учимся выводить их на рынок.
               </p>
               <p>
                 Знаем, как обидно вложить в продукт душу, а потом обнаружить,
@@ -246,33 +280,109 @@
             </div>
           </div>
 
-          <div class="case-heading">
+          <figure class="founders-photo">
+            <img
+              src="assets/sanya-nick-builders.webp"
+              alt="Саня и Ник обсуждают продукт за ноутбуком"
+              loading="lazy"
+            />
+          </figure>
+
+          <div id="cases" class="case-heading">
             <p class="section-kicker">Уже разбирали</p>
           </div>
           <div class="case-grid">
             <article class="case-card">
-              <div class="case-topline">
-                <span>01</span>
-                <a href="https://neuro-career.ru" target="_blank" rel="noreferrer">neuro-career.ru ↗</a>
+              <a
+                class="case-media"
+                href="https://boosty.to/aboba168/posts/95c36986-1dd2-49a1-be28-99db602ba2fe"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Смотреть разбор НейроКарьеры на Boosty"
+              >
+                <img
+                  src="assets/case-neurocareer-boosty.webp"
+                  alt="Превью разбора сервиса НейроКарьера"
+                  loading="lazy"
+                />
+              </a>
+              <div class="case-content">
+                <div class="case-topline">
+                  <span>01</span>
+                  <a href="https://neuro-career.ru" target="_blank" rel="noreferrer">neuro-career.ru ↗</a>
+                </div>
+                <h3>НейроКарьера</h3>
+                <p class="case-subtitle">Автоотклики и сопровождение поиска работы на hh.ru</p>
+
+                <div class="case-block">
+                  <span class="case-label">Стадия проекта</span>
+                  <p>
+                    Ранний коммерческий SaaS: около 100 пользователей, 10 оплат
+                    и два месяца рекламных тестов. До 80% людей отваливаются до
+                    того, как успевают увидеть ценность.
+                  </p>
+                </div>
+
+                <div class="case-block">
+                  <span class="case-label">Что забрали с разбора</span>
+                  <ul>
+                    <li>Telegram-авторизацию и более простой мобильный onboarding;</li>
+                    <li>доверие как отдельную продуктовую задачу — от страха блокировки HH до предложения завести отдельный аккаунт;</li>
+                    <li>серийные тесты Директа, инфлюенсеров и рефералок вместо оценки канала по одной попытке.</li>
+                  </ul>
+                </div>
+
+                <p class="case-outcome">
+                  Ядро продукта уже достаточно зрелое. Следующая задача —
+                  укрепить доверие, починить воронку и выстроить дистрибуцию.
+                </p>
               </div>
-              <h3>Автоотклики на вакансии в hh.ru</h3>
-              <p>
-                Ребята уже дошли до постоянных пользователей и первого платного
-                трафика. Разбирали стратегию продвижения, брендинг, каналы выхода
-                на рынок и места, где проседает продуктовая воронка.
-              </p>
             </article>
             <article class="case-card">
-              <div class="case-topline">
-                <span>02</span>
-                <a href="https://tutoriko.ru" target="_blank" rel="noreferrer">tutoriko.ru ↗</a>
+              <a
+                class="case-media"
+                href="https://boosty.to/aboba168/posts/0988fbfc-c2eb-43d3-9107-7ad1bdd648cb"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Смотреть разбор Tutoriko на Boosty"
+              >
+                <img
+                  src="assets/case-tutoriko-boosty.webp"
+                  alt="Превью разбора сервиса Tutoriko"
+                  loading="lazy"
+                />
+              </a>
+              <div class="case-content">
+                <div class="case-topline">
+                  <span>02</span>
+                  <a href="https://tutoriko.ru" target="_blank" rel="noreferrer">tutoriko.ru ↗</a>
+                </div>
+                <h3>Tutoriko</h3>
+                <p class="case-subtitle">Видеосвязь, доска и рабочая среда для репетиторов</p>
+
+                <div class="case-block">
+                  <span class="case-label">Стадия проекта</span>
+                  <p>
+                    Ранний работающий MVP: около 10 знакомых пользователей,
+                    первые оплаты и 300–400 посещений в месяц. Ценность за
+                    пределами круга знакомых ещё предстояло доказать.
+                  </p>
+                </div>
+
+                <div class="case-block">
+                  <span class="case-label">Что забрали с разбора</span>
+                  <ul>
+                    <li>измерить полную воронку и наблюдать первую сессию незнакомого преподавателя;</li>
+                    <li>проверить, нужен ли all-in-one, или продукту достаточно одного сильного сценария;</li>
+                    <li>не строить библиотеку уроков без спроса и искать первых клиентов в сообществах репетиторов.</li>
+                  </ul>
+                </div>
+
+                <p class="case-outcome">
+                  Главный сдвиг: команда переключилась с добавления функций на
+                  проверку гипотез и конкретных участков воронки.
+                </p>
               </div>
-              <h3>Интерактивная доска для репетиторов</h3>
-              <p>
-                Первые преподаватели уже пользуются продуктом и платят. Разобрали
-                следующий шаг выхода на рынок, варианты позиционирования и УТП,
-                а также гипотезы, которые стоит проверить дальше.
-              </p>
             </article>
           </div>
         </div>
@@ -434,7 +544,7 @@
             что проверять дальше и как доводить интерес пользователей до денег.
           </p>
           <a class="primary-button" data-apply-link href="#apply">
-            Подать заявку
+            Выйти к пользователям
           </a>
         </div>
       </section>
@@ -443,7 +553,7 @@
     <footer class="site-footer">
       <div class="footer-meta">
         <span>Не является публичной офертой</span>
-        <span>Сгенерено нейронкой, допилено руками</span>
+        <span>Сгенерено с нейронкой, отредактировано руками и с душой</span>
       </div>
       <a href="#top">Наверх</a>
     </footer>
