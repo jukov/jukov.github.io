@@ -418,6 +418,7 @@ h3 {
 }
 
 .panel-title {
+  margin-top: 16px;
   color: var(--white) !important;
   font-size: 22px;
   font-weight: 800;
