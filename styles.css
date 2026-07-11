@@ -515,6 +515,11 @@ h3 {
   background: #10100f;
 }
 
+.footer-meta {
+  display: grid;
+  gap: 6px;
+}
+
 @media (max-width: 1040px) {
   .reason-grid,
   .audience-grid {
