@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: #eee;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+#wrapper {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+#board {
+    border: 2px solid #333;
+    display: block;
+    flex-shrink: 0;
+}
+
+#panel {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 4px;
+}
+
+#record-block {
+    border: 1px solid #3a2a00;
+    background: #1a1200;
+    border-radius: 4px;
+    padding: 8px 10px;
+}
+
+#record-block .label {
+    font-size: 10px;
+    color: #7a5a00;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+#record {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d4a017;
+}
+
+.stat .label {
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.stat > div:not(.label) {
+    font-size: 24px;
+    font-weight: bold;
+    color: #eee;
+}
+
+#next-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.next-canvas {
+    border: 1px solid #2a2a2a;
+    background: #0a0a0a;
+    display: block;
+}
+
+#controls {
+    font-size: 10px;
+    color: #444;
+    line-height: 2;
+    margin-top: 4px;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay.hidden {
+    display: none;
+}
+
+#overlay-content {
+    text-align: center;
+}
+
+#overlay-title {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: #eee;
+    margin-bottom: 14px;
+}
+
+#overlay-sub {
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 1px;
+}
